@@ -71,7 +71,7 @@ Isi dengan kredensial Supabase Anda:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIs...
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your-key-here
 NEXT_PUBLIC_WA_NUMBER=6288216176460
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
@@ -251,7 +251,7 @@ git push origin main
 2. Import repository GitHub
 3. Set environment variables:
    - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
    - `NEXT_PUBLIC_WA_NUMBER`
    - `NEXT_PUBLIC_SITE_URL`
 4. Klik **Deploy**
