@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import type { CartItem } from "@/stores/cart-store"
-
 import { useCartStore } from "@/stores/cart-store"
 import { formatRupiah, getImageUrl } from "@/lib/utils"
 import { FALLBACK_PRODUCT_IMAGE } from "@/lib/constants"
@@ -18,13 +17,13 @@ export default function CartItemRow({ item }: CartItemRowProps) {
   return (
     <div className="flex gap-4 border-b border-card-border py-4">
       {/* Thumbnail */}
-      <div className="relative size-20 flex-shrink-0 overflow-hidden rounded-lg bg-black">
+      <div className="relative size-20 flex-shrink-0 overflow-hidden rounded-lg bg-black/40">
         <Image
           src={getImageUrl(item.image_url, FALLBACK_PRODUCT_IMAGE)}
           alt={item.name}
           fill
           sizes="80px"
-          className="object-cover"
+          className="object-contain p-1"
         />
       </div>
 
@@ -33,7 +32,7 @@ export default function CartItemRow({ item }: CartItemRowProps) {
         <h4 className="font-display text-sm uppercase tracking-wide text-white">
           {item.name}
         </h4>
-        <span className="text-sm font-semibold text-neon">
+        <span className="text-sm font-semibold text-accent">
           {formatRupiah(item.price)}
         </span>
 
@@ -41,7 +40,7 @@ export default function CartItemRow({ item }: CartItemRowProps) {
         <div className="mt-auto flex items-center gap-2">
           <button
             onClick={() => updateQuantity(item.id, item.quantity - 1)}
-            className="flex size-7 items-center justify-center rounded border border-card-border text-sm text-muted transition-colors hover:border-neon hover:text-neon"
+            className="flex size-7 items-center justify-center rounded border border-card-border text-sm text-muted transition-colors hover:border-accent hover:text-accent"
             aria-label="Kurangi jumlah"
           >
             −
@@ -51,7 +50,7 @@ export default function CartItemRow({ item }: CartItemRowProps) {
           </span>
           <button
             onClick={() => updateQuantity(item.id, item.quantity + 1)}
-            className="flex size-7 items-center justify-center rounded border border-card-border text-sm text-muted transition-colors hover:border-neon hover:text-neon"
+            className="flex size-7 items-center justify-center rounded border border-card-border text-sm text-muted transition-colors hover:border-accent hover:text-accent"
             aria-label="Tambah jumlah"
           >
             +

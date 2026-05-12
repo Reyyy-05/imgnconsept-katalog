@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
-/* ─── Design System Tokens ──────────────────────────────────── */
+/* ─── LBRN Brand Identity Design System ────────────────────── */
 
 :root {
-  --background: #000000;
+  --background: #111111;
   --foreground: #ffffff;
-  --neon: #39FF14;
-  --neon-dim: #2bcc10;
-  --neon-glow: 0 0 10px #39FF14, 0 0 40px rgba(57, 255, 20, 0.3);
-  --neon-glow-strong: 0 0 10px #39FF14, 0 0 30px #39FF14, 0 0 60px rgba(57, 255, 20, 0.4);
-  --card-bg: #0a0a0a;
-  --card-border: #1a1a1a;
-  --card-border-hover: #39FF14;
-  --text-muted: #888888;
+  --accent: #E8202A;
+  --accent-dim: #c41a22;
+  --accent-glow: 0 0 10px rgba(232, 32, 42, 0.4), 0 0 40px rgba(232, 32, 42, 0.2);
+  --accent-glow-strong: 0 0 10px #E8202A, 0 0 30px rgba(232, 32, 42, 0.4), 0 0 60px rgba(232, 32, 42, 0.25);
+  --card-bg: #1A1A1A;
+  --card-border: #2a2a2a;
+  --card-border-hover: #E8202A;
+  --text-muted: #999999;
   --text-secondary: #cccccc;
   --overlay: rgba(0, 0, 0, 0.7);
-  --drawer-bg: #0d0d0d;
+  --drawer-bg: #141414;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-neon: var(--neon);
-  --color-neon-dim: var(--neon-dim);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
   --color-card-bg: var(--card-bg);
   --color-card-border: var(--card-border);
   --color-card-border-hover: var(--card-border-hover);
@@ -51,22 +51,22 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #444;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--neon);
+  background: var(--accent);
 }
 
 /* ─── Selection ─────────────────────────────────────────────── */
 
 ::selection {
-  background: rgba(57, 255, 20, 0.3);
+  background: rgba(232, 32, 42, 0.3);
   color: #fff;
 }
 
@@ -82,25 +82,97 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
-/* ─── Neon Glow Utilities ───────────────────────────────────── */
+/* ─── Accent Glow Utilities (Replaces neon-*) ───────────────── */
 
-.neon-text {
-  text-shadow: 0 0 7px #39FF14, 0 0 20px rgba(57, 255, 20, 0.5);
+.accent-text {
+  text-shadow: 0 0 7px rgba(232, 32, 42, 0.6), 0 0 20px rgba(232, 32, 42, 0.3);
 }
 
-.neon-border {
-  box-shadow: var(--neon-glow);
-  border-color: var(--neon);
+.accent-border {
+  box-shadow: var(--accent-glow);
+  border-color: var(--accent);
 }
 
-.neon-glow-hover {
+.accent-glow-hover {
   transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
-.neon-glow-hover:hover {
-  box-shadow: var(--neon-glow);
-  border-color: var(--neon);
+.accent-glow-hover:hover {
+  box-shadow: var(--accent-glow);
+  border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+/* ─── Product Image Lightbox ────────────────────────────────── */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+  cursor: zoom-out;
+  animation: lightbox-in 0.25s ease-out;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 60px rgba(232, 32, 42, 0.15);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+  background: var(--accent);
+}
+
+.lightbox-product-name {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: 1px solid rgba(232, 32, 42, 0.3);
+}
+
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ─── Animations ────────────────────────────────────────────── */
@@ -116,7 +188,7 @@ body {
   }
 }
 
-@keyframes pulse-neon {
+@keyframes pulse-accent {
   0%, 100% {
     opacity: 1;
   }

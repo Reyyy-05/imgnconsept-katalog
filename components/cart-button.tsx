@@ -24,7 +24,7 @@ export default function CartButton() {
         "relative flex items-center justify-center rounded-lg p-2",
         "transition-all duration-300",
         "hover:bg-white/5",
-        displayCount > 0 && "text-neon"
+        displayCount > 0 && "text-accent"
       )}
       aria-label={`Keranjang belanja, ${displayCount} item`}
     >
@@ -47,7 +47,7 @@ export default function CartButton() {
 
       {/* Badge */}
       {displayCount > 0 && (
-        <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-neon text-xs font-bold text-black">
+        <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
           {displayCount > 99 ? "99+" : displayCount}
         </span>
       )}

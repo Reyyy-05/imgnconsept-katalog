@@ -15,18 +15,18 @@ export default function HeroSection() {
           className="object-cover"
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#111111]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-        {/* Decorative line */}
-        <div className="mx-auto mb-6 h-px w-20 bg-neon opacity-60" />
+        {/* Red accent bar */}
+        <div className="mx-auto mb-6 h-1 w-20 bg-accent" />
 
         {/* Heading */}
         <h1 className="font-display text-6xl uppercase leading-none tracking-wider text-white sm:text-8xl lg:text-9xl">
           <span className="block">Bold Builds.</span>
-          <span className="block text-neon neon-text">Raw Power.</span>
+          <span className="block text-accent accent-text">Raw Power.</span>
         </h1>
 
         {/* Subtitle */}
@@ -38,7 +38,7 @@ export default function HeroSection() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
             href="#katalog"
-            className="group inline-flex items-center gap-2 rounded-lg border-2 border-neon bg-neon/10 px-8 py-4 font-body text-sm font-semibold uppercase tracking-widest text-neon transition-all duration-300 hover:bg-neon hover:text-black hover:shadow-[var(--neon-glow)]"
+            className="group inline-flex items-center gap-2 rounded-lg border-2 border-accent bg-accent/10 px-8 py-4 font-body text-sm font-semibold uppercase tracking-widest text-accent transition-all duration-300 hover:bg-accent hover:text-white hover:shadow-[var(--accent-glow)]"
           >
             Lihat Katalog
             <svg
@@ -59,15 +59,15 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* Decorative line */}
-        <div className="mx-auto mt-10 h-px w-20 bg-neon opacity-60" />
+        {/* Red accent bar */}
+        <div className="mx-auto mt-10 h-1 w-20 bg-accent" />
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs uppercase tracking-widest text-muted">Scroll</span>
-          <div className="h-8 w-px animate-pulse bg-neon/50" />
+          <div className="h-8 w-px animate-pulse bg-accent/50" />
         </div>
       </div>
     </section>

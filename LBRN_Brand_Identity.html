@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LBRN — Brand Identity</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@900&family=Barlow+Condensed:wght@900&family=Black+Han+Sans&display=swap');
+
+  :root {
+    --red: #E8202A;
+    --black: #111111;
+    --white: #FFFFFF;
+    --dark-gray: #1A1A1A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #F0EEE8;
+    font-family: 'Barlow', 'Arial Black', Impact, sans-serif;
+  }
+
+  .page {
+    width: 1270px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+  }
+
+  /* ── TYPOGRAPHY CORE ── */
+  .lbrn-bold {
+    font-family: 'Barlow', 'Arial Black', Impact, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    font-stretch: expanded;
+    transform: scaleX(1.15);
+    transform-origin: left;
+    display: inline-block;
+    line-height: 0.9;
+  }
+  .lbrn-superbold {
+    font-family: 'Barlow', 'Arial Black', Impact, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    font-stretch: expanded;
+    transform: scaleX(1.22);
+    transform-origin: left;
+    display: inline-block;
+    line-height: 0.88;
+  }
+  .lbrn-outline {
+    font-family: 'Barlow', 'Arial Black', Impact, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    font-stretch: expanded;
+    transform: scaleX(1.15);
+    transform-origin: left;
+    display: inline-block;
+    -webkit-text-stroke: 2px currentColor;
+    -webkit-text-fill-color: transparent;
+    line-height: 0.9;
+  }
+  .lbrn-brush {
+    font-family: 'Black Han Sans', 'Arial Black', Impact, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transform: skewX(-8deg) scaleX(1.1);
+    transform-origin: left;
+    display: inline-block;
+    line-height: 0.9;
+  }
+
+  /* ── PAGE 1: COVER ── */
+  .p1 { background: var(--black); }
+  .p1 .cover-content {
+    position: absolute;
+    left: 6%;
+    bottom: 22%;
+  }
+  .p1 .big-title {
+    font-size: clamp(80px, 13vw, 165px);
+    color: var(--white);
+  }
+  .p1 .style-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .p1 .style-row span {
+    font-family: 'Barlow', 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(12px, 1.2vw, 16px);
+    color: var(--white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .p1 .style-row .sep { color: var(--red); }
+  .p1 .brand-desc {
+    position: absolute;
+    bottom: 5%;
+    left: 6%;
+  }
+  .p1 .brand-desc h4 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    font-size: clamp(10px, 1vw, 13px);
+    color: var(--white);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .p1 .brand-desc p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: clamp(9px, 0.85vw, 11px);
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    max-width: 220px;
+  }
+  .p1 .styles-badge {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: right;
+  }
+  .p1 .styles-badge .num {
+    font-family: 'Barlow', 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(36px, 5vw, 70px);
+    color: var(--white);
+    line-height: 1;
+  }
+  .p1 .styles-badge .label {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: clamp(10px, 1vw, 13px);
+    color: var(--white);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .p1 .red-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28%;
+    height: 4px;
+    background: var(--red);
+  }
+  .p1 .red-accent2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 28%;
+    height: 4px;
+    background: var(--red);
+  }
+  .p1 .lbrn-rotated {
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: rotate(90deg) translateX(-50%);
+    font-family: 'Barlow', 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(7px, 0.9vw, 11px);
+    letter-spacing: 0.18em;
+    color: var(--red);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ── PAGE 2: LETTER SHEET ── */
+  .p2 { background: var(--red); }
+  .p2 .sheet-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 3vh, 40px);
+    padding: 6%;
+  }
+  .p2 .section-label {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: clamp(9px, 1vw, 13px);
+    color: var(--white);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .p2 .big-alpha {
+    font-size: clamp(28px, 5.5vw, 72px);
+    color: var(--white);
+    text-align: center;
+    line-height: 1.1;
+  }
+  .p2 .divider { width: 100%; height: 1px; background: rgba(255,255,255,0.3); }
+
+  /* ── PAGE 3: FONT STYLES ── */
+  .p3 { background: var(--black); }
+  .p3 .styles-container {
+    position: absolute;
+    inset: 0;
+    padding: 5% 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(12px, 2.5vh, 36px);
+  }
+  .p3 .section-tag {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: clamp(9px, 0.9vw, 12px);
+    color: var(--white);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    padding-top: 10px;
+    border-top: 2px solid var(--red);
+    display: inline-block;
+  }
+  .p3 .logo-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .p3 .logo-text {
+    font-size: clamp(42px, 8.5vw, 110px);
+    color: var(--white);
+  }
+  .p3 .red-bar {
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    width: 50px;
+    height: 4px;
+    background: var(--red);
+  }
+  .p3 .side-label {
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    transform: rotate(90deg) translateX(-50%);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    font-size: clamp(7px, 0.8vw, 10px);
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ── PAGE 4: ALL CAPS DEMO ── */
+  .p4 { background: var(--black); }
+  .p4 .all-caps-wrap {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5% 8%;
+    gap: 0;
+  }
+  .p4 .cap-row {
+    font-size: clamp(48px, 10.5vw, 138px);
+    line-height: 0.88;
+  }
+  .p4 .c-red { color: var(--red); }
+  .p4 .c-white { color: var(--white); }
+  .p4 .c-white-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--white);
+  }
+  .p4 .brand-row {
+    position: absolute;
+    bottom: 6%;
+    left: 8%;
+    right: 8%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .p4 .brand-tag {
+    font-family: 'Barlow', 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(8px, 1vw, 13px);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .p4 .desc-box {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    text-align: right;
+    max-width: 220px;
+  }
+  .p4 .desc-box .line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--red);
+    margin-bottom: 10px;
+    margin-left: auto;
+    width: 60%;
+  }
+  .p4 .desc-box p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: clamp(8px, 0.85vw, 11px);
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+
+  /* ── PAGE 5: MOTUL-STYLE LOGOS ── */
+  .p5 { background: var(--white); }
+  .p5 .logo-grid {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .p5 .half-top {
+    flex: 1;
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .p5 .half-bottom {
+    flex: 1;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .motul-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(10px, 1.5vh, 20px) clamp(24px, 3.5vw, 50px);
+  }
+  .motul-logo-text {
+    font-family: 'Barlow', 'Arial Black', Impact, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-stretch: expanded;
+    letter-spacing: -0.02em;
+    font-size: clamp(40px, 7vw, 92px);
+    transform: scaleX(1.18) skewX(-5deg);
+    transform-origin: center;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  /* ── PAGE 6: LOGO VARIANTS SHEET ── */
+  .p6 { background: #F5F3EE; }
+  .p6 .variants-wrap {
+    position: absolute;
+    inset: 0;
+    padding: 5% 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .p6 .variant-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .p6 .variant-label {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: clamp(8px, 0.9vw, 12px);
+    color: #555;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    min-width: 120px;
+  }
+  .logo-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(8px, 1.2vh, 14px) clamp(20px, 2.5vw, 36px);
+    border-radius: 4px;
+  }
+  .logo-pill-text {
+    font-family: 'Barlow', 'Arial Black', Impact, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-size: clamp(28px, 4.5vw, 58px);
+    transform: scaleX(1.15) skewX(-4deg);
+    transform-origin: center;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  @media (max-width: 900px) {
+    .p1, .p2, .p3, .p4, .p5, .p6 {
+      aspect-ratio: unset;
+      min-height: 400px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     PAGE 1 : COVER
+══════════════════════════════════════ -->
+<div class="page p1">
+  <div class="cover-content">
+    <div class="big-title lbrn-bold">LBRN</div>
+    <div style="overflow:hidden; max-width:80vw; margin-top:16px;">
+      <span class="lbrn-bold" style="font-size:clamp(18px,2.5vw,32px); color:var(--white); letter-spacing:0.08em;">EXPANDED</span>
+    </div>
+    <div class="style-row" style="margin-top:24px;">
+      <span>BOLD</span>
+      <span class="sep">—</span>
+      <span>SUPER-BOLD</span>
+      <span class="sep">—</span>
+      <span>OUTLINE</span>
+    </div>
+  </div>
+  <div class="brand-desc">
+    <h4>Typologic</h4>
+    <p>LBRN adalah identitas yang kuat dan modern, dirancang untuk display. Font ini memberikan kesan bold dan impactful.</p>
+  </div>
+  <div class="styles-badge">
+    <div class="num">03</div>
+    <div class="label">Styles</div>
+  </div>
+  <div class="red-accent"></div>
+  <div class="red-accent2"></div>
+  <div class="lbrn-rotated">LBRN EXPANDED — LBRN EXPANDED — LBRN EXPANDED</div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE 2 : LETTER & NUMBER
+══════════════════════════════════════ -->
+<div class="page p2">
+  <div class="sheet-center">
+    <span class="section-label">Letter &amp; Number</span>
+    <div class="big-alpha lbrn-bold">ABCDEFGHIJKLMN</div>
+    <div class="big-alpha lbrn-bold">OPQRSTUVWXYZ</div>
+    <div class="big-alpha lbrn-bold">0123456789</div>
+    <div class="divider"></div>
+    <span class="section-label">Multilingual</span>
+    <div class="big-alpha lbrn-bold" style="font-size:clamp(20px,3.8vw,48px);">ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ</div>
+    <div class="big-alpha lbrn-bold" style="font-size:clamp(20px,3.8vw,48px);">ÒÓÔÕÖØÙÚÛÜ·ÐÑÝÞ</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE 3 : FONT STYLES
+══════════════════════════════════════ -->
+<div class="page p3">
+  <div class="red-bar"></div>
+  <div class="styles-container">
+    <div class="logo-row">
+      <span class="section-tag">LBRN Bold</span>
+      <div class="logo-text lbrn-bold">LBRN</div>
+    </div>
+    <div class="logo-row">
+      <span class="section-tag">LBRN Super Bold</span>
+      <div class="logo-text lbrn-superbold" style="font-size:clamp(42px,8.5vw,115px);">LBRN</div>
+    </div>
+    <div class="logo-row">
+      <span class="section-tag">LBRN Outline</span>
+      <div class="logo-text lbrn-outline">LBRN</div>
+    </div>
+  </div>
+  <div class="side-label">LBRN EXPANDED — LBRN EXPANDED — LBRN EXPANDED</div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE 4 : ALL CAPS LAYERED
+══════════════════════════════════════ -->
+<div class="page p4">
+  <div class="desc-box">
+    <span class="line"></span>
+    <p>LBRN adalah identitas visual yang kuat, dirancang untuk display. Brand ini memberikan kesan bold dan powerful.</p>
+  </div>
+  <div class="all-caps-wrap">
+    <div class="cap-row lbrn-bold c-red">LBRN</div>
+    <div class="cap-row lbrn-outline c-white-outline" style="margin-top:-8px;">LBRN</div>
+    <div class="cap-row lbrn-superbold c-red" style="margin-top:-12px;">LBRN</div>
+  </div>
+  <div class="brand-row">
+    <span class="brand-tag" style="color:var(--red);">LBRN EXPANDED</span>
+    <span class="brand-tag" style="color:var(--white);">LBRN EXPANDED</span>
+    <span class="brand-tag" style="color:var(--red);">LBRN EXPANDED</span>
+    <span class="brand-tag" style="color:var(--white);">LBRN EXPANDED</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE 5 : MOTUL-STYLE LOGO
+══════════════════════════════════════ -->
+<div class="page p5">
+  <div class="logo-grid">
+    <div class="half-top">
+      <div class="motul-logo" style="background:var(--red);">
+        <span class="motul-logo-text" style="color:var(--white);">LBRN</span>
+      </div>
+    </div>
+    <div class="half-bottom">
+      <div class="motul-logo" style="background:var(--black);">
+        <span class="motul-logo-text" style="color:var(--red);">LBRN</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE 6 : ALL LOGO VARIANTS
+══════════════════════════════════════ -->
+<div class="page p6">
+  <div class="variants-wrap">
+    <div style="font-family:'Barlow',sans-serif; font-weight:900; font-size:clamp(9px,1vw,13px); letter-spacing:0.15em; color:#333; text-transform:uppercase; border-left:4px solid var(--red); padding-left:12px;">Logo Variants</div>
+
+    <!-- Variant 1: RED bg white text -->
+    <div class="variant-row">
+      <span class="variant-label">Primary Red</span>
+      <div class="logo-pill" style="background:var(--red);">
+        <span class="logo-pill-text" style="color:var(--white);">LBRN</span>
+      </div>
+    </div>
+
+    <!-- Variant 2: BLACK bg white text -->
+    <div class="variant-row">
+      <span class="variant-label">Primary Black</span>
+      <div class="logo-pill" style="background:var(--black);">
+        <span class="logo-pill-text" style="color:var(--white);">LBRN</span>
+      </div>
+    </div>
+
+    <!-- Variant 3: WHITE bg red text -->
+    <div class="variant-row">
+      <span class="variant-label">Inverse Red</span>
+      <div class="logo-pill" style="background:var(--white); border:2px solid var(--red);">
+        <span class="logo-pill-text" style="color:var(--red);">LBRN</span>
+      </div>
+    </div>
+
+    <!-- Variant 4: BLACK bg red text -->
+    <div class="variant-row">
+      <span class="variant-label">Dark Red</span>
+      <div class="logo-pill" style="background:var(--black);">
+        <span class="logo-pill-text" style="color:var(--red);">LBRN</span>
+      </div>
+    </div>
+
+    <!-- Variant 5: Outline on light -->
+    <div class="variant-row">
+      <span class="variant-label">Outline</span>
+      <div class="logo-pill" style="background:transparent; border:2px solid var(--black);">
+        <span class="logo-pill-text lbrn-outline" style="color:var(--black); font-size:clamp(28px,4.5vw,58px); -webkit-text-stroke:3px var(--black); -webkit-text-fill-color:transparent; transform:scaleX(1.15) skewX(-4deg);">LBRN</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -9,14 +9,14 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8 text-center">
           {/* Logo */}
           <div>
-            <h3 className="font-display text-3xl uppercase tracking-widest text-neon">
+            <h3 className="font-display text-3xl uppercase tracking-widest text-accent">
               {SITE_CONFIG.name}
             </h3>
             <p className="mt-2 text-sm text-muted">{SITE_CONFIG.tagline}</p>
           </div>
 
-          {/* Divider */}
-          <div className="h-px w-16 bg-neon/30" />
+          {/* Red accent bar */}
+          <div className="h-1 w-16 bg-accent/30" />
 
           {/* Social Links */}
           <div className="flex items-center gap-6">
@@ -25,7 +25,7 @@ export default function Footer() {
               href={SOCIAL_LINKS.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-muted transition-colors hover:text-neon"
+              className="group flex items-center gap-2 text-muted transition-colors hover:text-accent"
               aria-label="Instagram"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110">
@@ -43,7 +43,7 @@ export default function Footer() {
               href={SOCIAL_LINKS.tiktok.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-muted transition-colors hover:text-neon"
+              className="group flex items-center gap-2 text-muted transition-colors hover:text-accent"
               aria-label="TikTok"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="transition-transform group-hover:scale-110">

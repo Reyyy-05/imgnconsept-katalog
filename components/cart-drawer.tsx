@@ -57,7 +57,7 @@ export default function CartDrawer() {
               Keranjang
             </h2>
             {totalItems > 0 && (
-              <span className="rounded-full bg-neon/20 px-2.5 py-0.5 text-xs font-semibold text-neon">
+              <span className="rounded-full bg-accent/20 px-2.5 py-0.5 text-xs font-semibold text-accent">
                 {totalItems}
               </span>
             )}
@@ -94,7 +94,7 @@ export default function CartDrawer() {
               <p className="text-muted">Keranjang kosong</p>
               <button
                 onClick={closeCart}
-                className="rounded-lg border border-card-border px-4 py-2 text-sm text-secondary transition-colors hover:border-neon hover:text-neon"
+                className="rounded-lg border border-card-border px-4 py-2 text-sm text-secondary transition-colors hover:border-accent hover:text-accent"
               >
                 Lanjut Belanja
               </button>

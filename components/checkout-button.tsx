@@ -28,15 +28,15 @@ export default function CheckoutButton() {
       {/* Summary */}
       <div className="mb-4 flex items-center justify-between">
         <span className="text-sm text-muted">Total</span>
-        <span className="font-display text-2xl text-neon">
+        <span className="font-display text-2xl text-accent">
           {formatRupiah(totalPrice)}
         </span>
       </div>
 
-      {/* Checkout Button */}
+      {/* Checkout Button — WhatsApp green preserved for brand recognition */}
       <button
         onClick={handleCheckout}
-        className="flex w-full items-center justify-center gap-3 rounded-xl bg-neon py-4 font-body text-sm font-bold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-[var(--neon-glow-strong)] active:scale-[0.98]"
+        className="flex w-full items-center justify-center gap-3 rounded-xl bg-[#25D366] py-4 font-body text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 hover:bg-[#1da851] hover:shadow-[0_0_20px_rgba(37,211,102,0.3)] active:scale-[0.98]"
       >
         {/* WhatsApp Icon */}
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

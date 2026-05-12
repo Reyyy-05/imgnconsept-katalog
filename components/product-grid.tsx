@@ -22,12 +22,12 @@ export default function ProductGrid({ products, categories }: ProductGridProps) 
       {/* Section Header */}
       <div className="mb-12 text-center">
         <h2 className="font-display text-4xl uppercase tracking-wider text-white sm:text-5xl">
-          Katalog <span className="text-neon">Bodykit</span>
+          Katalog <span className="text-accent">Bodykit</span>
         </h2>
         <p className="mt-3 text-secondary">
           Pilih bodykit impianmu untuk Honda CB kustom
         </p>
-        <div className="mx-auto mt-4 h-px w-16 bg-neon/50" />
+        <div className="mx-auto mt-4 h-1 w-16 bg-accent/50" />
       </div>
 
       {/* Filter */}

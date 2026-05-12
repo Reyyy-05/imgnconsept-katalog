@@ -21,8 +21,8 @@ export default function CategoryFilter({
         className={cn(
           "rounded-full border px-5 py-2 text-sm font-medium transition-all duration-300",
           activeCategory === null
-            ? "border-neon bg-neon/10 text-neon shadow-[0_0_10px_rgba(57,255,20,0.2)]"
-            : "border-card-border bg-card-bg text-muted hover:border-neon/50 hover:text-secondary"
+            ? "border-accent bg-accent/10 text-accent shadow-[0_0_10px_rgba(232,32,42,0.15)]"
+            : "border-card-border bg-card-bg text-muted hover:border-accent/50 hover:text-secondary"
         )}
       >
         Semua
@@ -36,8 +36,8 @@ export default function CategoryFilter({
           className={cn(
             "rounded-full border px-5 py-2 text-sm font-medium transition-all duration-300",
             activeCategory === category
-              ? "border-neon bg-neon/10 text-neon shadow-[0_0_10px_rgba(57,255,20,0.2)]"
-              : "border-card-border bg-card-bg text-muted hover:border-neon/50 hover:text-secondary"
+              ? "border-accent bg-accent/10 text-accent shadow-[0_0_10px_rgba(232,32,42,0.15)]"
+              : "border-card-border bg-card-bg text-muted hover:border-accent/50 hover:text-secondary"
           )}
         >
           {category}
