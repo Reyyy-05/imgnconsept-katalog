@@ -1,4 +1,5 @@
-import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/constants"
+import Image from "next/image"
+import { SITE_CONFIG, SOCIAL_LINKS, LOGO_IMAGE } from "@/lib/constants"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -8,11 +9,15 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-8 text-center">
           {/* Logo */}
-          <div>
-            <h3 className="font-display text-3xl uppercase tracking-widest text-accent">
-              {SITE_CONFIG.name}
-            </h3>
-            <p className="mt-2 text-sm text-muted">{SITE_CONFIG.tagline}</p>
+          <div className="flex flex-col items-center gap-3">
+            <Image
+              src={LOGO_IMAGE}
+              alt="LBRN"
+              width={160}
+              height={53}
+              className="h-12 w-auto object-contain"
+            />
+            <p className="text-sm text-muted">{SITE_CONFIG.tagline}</p>
           </div>
 
           {/* Red accent bar */}

@@ -1,11 +1,14 @@
 // ─── Site Configuration ────────────────────────────────────────
 export const SITE_CONFIG = {
-  name: "IMGN Concept",
+  name: "LBRN",
   tagline: "Spesialis Bodykit Motor CB Kustom",
   description:
-    "IMGN Concept — Toko spesialis bodykit motor CB kustom. Fairing, tangki, body set, dan aksesoris berkualitas tinggi untuk Honda CB.",
+    "LBRN — Toko spesialis bodykit motor CB kustom. Fairing, tangki, body set, dan aksesoris berkualitas tinggi untuk Honda CB.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
 } as const
+
+// ─── Logo Image ────────────────────────────────────────────────
+export const LOGO_IMAGE = "/logos/LBRN_NEW_transparent.png"
 
 // ─── WhatsApp ──────────────────────────────────────────────────
 export const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || "6288216176460"
